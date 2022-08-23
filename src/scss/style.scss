@@ -1,0 +1,55 @@
+@import './variables';
+@import './fonts';
+
+@import './blocks/_header';
+@import './blocks/_nav';
+@import './blocks/_button';
+@import './blocks/_slider';
+@import './blocks/_about';
+@import './blocks/_title';
+@import './blocks/_services';
+
+* {
+  font-family: 'Roboto';
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.dark {
+  color: #000;
+}
+
+.light {
+  color: #fff;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.tel {
+  margin-right: 2.5rem;
+}
+
+.wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.custom__container {
+  margin: 0 auto;
+  max-width: 1280px;
+}

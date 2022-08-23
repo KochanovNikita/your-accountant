@@ -1,0 +1,16 @@
+@import './_service';
+
+.services {
+  width: 100%;
+  padding: 60px 0 8px 0;
+  min-height: 668px;
+  &__wrapper {
+    margin-top: 2.4rem;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+  }
+}

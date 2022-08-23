@@ -1,0 +1,22 @@
+.btn {
+  background: $light-bg;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 2rem;
+  cursor: pointer;
+  &__header {
+    padding: 0 2.5rem;
+  }
+
+  &__service {
+    padding: 0 2rem;
+    background: initial;
+    border: 2px solid $light-bg;
+    margin: 0 auto;
+    &:hover {
+      background: $light-bg;
+    }
+  }
+}

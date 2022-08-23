@@ -1,0 +1,48 @@
+.service {
+  &__header {
+    min-height: 18.5rem;
+    background: linear-gradient(180deg, #8CADF4 0%, rgba(140, 173, 244, 0) 80%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: .7rem 1.2rem 1.5rem 1.2rem;
+    box-shadow: 0px 4px 4px 0px #00000080;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &_title {
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 2rem;
+      min-height: 3.5rem;
+    }
+
+    &_content {
+      margin-top: 2.3rem;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.5;
+      min-height: 7.8rem;
+    }
+  }
+
+  &__footer {
+    &_icon {
+      width: 60px;
+      height: 60px;
+      margin: 1.625rem auto;
+    }
+
+    &_title {
+      font-weight: 700;
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+    }
+
+    &_content {
+      margin-top: 1rem;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+}

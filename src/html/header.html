@@ -1,0 +1,37 @@
+<header class="header col-12">
+  <nav class="nav ">
+    <a href="/" class="dark logo col-2">
+      Ваш бухгалтер
+    </a>
+  
+    <ul class="nav__list">
+      @@include('components/nav-link.html', {
+        "link": "#about",
+        "title": "О нас"
+      })
+      @@include('components/nav-link.html', {
+        "link": "#services",
+        "title": "Услуги"
+      })
+      @@include('components/nav-link.html', {
+        "link": "#",
+        "title": "Тарифы"
+      })
+      @@include('components/nav-link.html', {
+        "link": "#",
+        "title": "Контакты"
+      })
+    </ul>
+  
+    <div class="d-flex">
+      <a class="dark tel d-block" href="tel:+375 29 123-45-67">
+        +375 29 123-45-67
+      </a>
+      <button class="btn btn__header d-block">
+        Заказать звонок
+      </button>
+    </div>
+  </nav>
+  @@include('./components/slider.html', {})
+  <div id="about"></div>
+</header>

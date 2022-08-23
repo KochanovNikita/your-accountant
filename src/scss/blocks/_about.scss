@@ -1,0 +1,19 @@
+.about {
+  width: 100%;
+  min-height: 592px;
+  padding: 40px 0 104px 0;
+  background: linear-gradient(180deg, #173151 43.75%, rgba(23, 49, 81, 0) 100%);
+
+  &__content {
+    margin-top: 3.6rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.6rem;
+
+    .light {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}

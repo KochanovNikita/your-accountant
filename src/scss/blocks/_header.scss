@@ -1,0 +1,17 @@
+.header {
+  width: 100%;
+  min-height: 594px;
+  padding: 112px 0 30px 0;
+  background: $dark-bg;
+  .logo {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .tel {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+}

@@ -1,0 +1,103 @@
+.slider {
+
+  input[type=radio] {
+    display: none;
+  }
+
+  &__wrapper {
+    overflow: hidden;
+  }
+
+  &__items {
+    display: flex; 
+    transition: all 2s ease-in-out;
+    
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    p {
+      width: 100%;
+      color: #fff;
+      position: absolute;
+      width: 80%;
+      text-align: center;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 700;
+      font-size: 2.5rem;
+      line-height: 2.625rem;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    label {
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: inherit;
+      cursor: pointer;   
+      .circle{
+        width: 10px;
+        height: 10px;
+        background-color: #B7B7B8;
+        border-radius: 50%;
+        transition: all .15s ease-in;
+      }
+    }
+  }
+}
+ 
+
+
+#radio-1:checked ~ .slider__controls label[for="radio-1"] .circle,
+#radio-2:checked ~ .slider__controls label[for="radio-2"] .circle,
+#radio-3:checked ~ .slider__controls label[for="radio-3"] .circle,
+#radio-4:checked ~ .slider__controls label[for="radio-4"] .circle{ 
+  background-color: $light-bg;
+}
+
+.slider__controls label:hover .circle{
+  background-color: #EFA444;
+}
+
+#radio-1:checked ~ .slider__controls label[for="radio-1"] .circle:hover,
+#radio-2:checked ~ .slider__controls label[for="radio-2"] .circle:hover,
+#radio-3:checked ~ .slider__controls label[for="radio-3"] .circle:hover,
+#radio-4:checked ~ .slider__controls label[for="radio-4"] .circle:hover{ 
+  background-color: #EFA444;
+}
+
+#radio-1:checked ~ .slider__controls label[for="radio-1"] .circle:active,
+#radio-2:checked ~ .slider__controls label[for="radio-2"] .circle:active,
+#radio-3:checked ~ .slider__controls label[for="radio-3"] .circle:active,
+#radio-4:checked ~ .slider__controls label[for="radio-4"] .circle:active{ 
+  opacity: .7;
+}
+
+.slider__controls label .circle:active{
+  opacity: .7;
+}
+
+#radio-1:checked ~ .slider__wrapper .slider__items{ 
+  transform: translate(0);
+}
+
+#radio-2:checked ~ .slider__wrapper .slider__items { 
+  transform: translate(-100%);
+}
+
+#radio-3:checked ~ .slider__wrapper .slider__items { 
+  transform: translate(-200%);
+}
+
+#radio-4:checked ~ .slider__wrapper .slider__items { 
+  transform: translate(-300%);
+}
