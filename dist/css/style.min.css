@@ -428,6 +428,7 @@
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.5rem;
+  min-height: 3rem;
 }
 .service__footer_content {
   margin-top: 1rem;
