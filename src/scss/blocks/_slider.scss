@@ -1,4 +1,7 @@
 .slider {
+  max-width: 1008px;
+  margin: 0 auto;
+
   input[type=radio] {
     display: none;
   }
@@ -9,7 +12,7 @@
 
   &__items {
     display: flex; 
-    transition: all 2s ease-in-out;
+    transition: all 1s ease-in-out;
     
   }
 
@@ -29,6 +32,8 @@
       font-size: 2.5rem;
       line-height: 2.625rem;
     }
+
+
   }
 
   &__controls {
@@ -101,8 +106,16 @@
   transform: translate(-300%);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .slider {
-    max-width: 100%;
+    &__item {
+      p {
+        font-size: 1.5rem;
+      }
+
+      img {
+        max-width: 576px;
+      }
+    }
   }
 }
