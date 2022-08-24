@@ -1,0 +1,19 @@
+.footer {
+  min-height: 632px;
+  padding: 2.7rem 0 4rem 0;
+  background: $dark-bg;
+  &__wrapper {
+    padding: 0 1rem;
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footer {
+    &__wrapper {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

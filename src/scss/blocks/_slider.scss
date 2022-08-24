@@ -1,5 +1,4 @@
 .slider {
-
   input[type=radio] {
     display: none;
   }
@@ -100,4 +99,10 @@
 
 #radio-4:checked ~ .slider__wrapper .slider__items { 
   transform: translate(-300%);
+}
+
+@media screen and (max-width: 768px) {
+  .slider {
+    max-width: 100%;
+  }
 }

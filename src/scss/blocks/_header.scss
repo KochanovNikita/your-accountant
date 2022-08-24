@@ -1,3 +1,5 @@
+@import './menu';
+
 .header {
   width: 100%;
   min-height: 594px;
@@ -9,9 +11,4 @@
     line-height: 2rem;
   }
 
-  .tel {
-    font-weight: 700;
-    font-size: 1.25rem;
-    line-height: 2rem;
-  }
 }

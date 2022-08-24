@@ -1,0 +1,38 @@
+.call {
+  display: flex;
+  &__tel {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin-right: 2.5rem;
+    display: block;
+    color: #000;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .call {
+    flex-direction: column;
+  }
+}
+
+
+@media screen and (max-width: 991px) {
+  .call {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .call {
+    &__tel {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .call {
+    display: none;
+  }
+}

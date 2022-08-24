@@ -1,6 +1,6 @@
 <header class="header col-12">
   <nav class="nav ">
-    <a href="/" class="dark logo col-2">
+    <a href="/" class="dark logo col-5 col-md-3 col-lg-2">
       Ваш бухгалтер
     </a>
   
@@ -14,22 +14,35 @@
         "title": "Услуги"
       })
       @@include('components/nav-link.html', {
-        "link": "#",
+        "link": "#tariffs",
         "title": "Тарифы"
       })
       @@include('components/nav-link.html', {
-        "link": "#",
+        "link": "#contacts",
         "title": "Контакты"
       })
     </ul>
   
-    <div class="d-flex">
-      <a class="dark tel d-block" href="tel:+375 29 123-45-67">
+    <div class="call">
+      <a class="call__tel" href="tel:+375 29 123-45-67">
         +375 29 123-45-67
       </a>
-      <button class="btn btn__header d-block">
+      <a href="#form" class="btn btn__header d-block dark">
         Заказать звонок
-      </button>
+      </a>
+    </div>
+    <div class="hamburger-menu">
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>
+      <ul class="menu__box">
+        <li><a class="menu__item" href="#about">О нас</a></li>
+        <li><a class="menu__item" href="#services">Услуги</a></li>
+        <li><a class="menu__item" href="#tariffs">Тарифы</a></li>
+        <li><a class="menu__item" href="#contacts">Контакты</a></li>
+      </ul>
+
     </div>
   </nav>
   @@include('./components/slider.html', {})

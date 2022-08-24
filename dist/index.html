@@ -12,7 +12,7 @@
   <body>
     <header class="header col-12">
   <nav class="nav ">
-    <a href="/" class="dark logo col-2">
+    <a href="/" class="dark logo col-5 col-md-3 col-lg-2">
       Ваш бухгалтер
     </a>
   
@@ -24,20 +24,33 @@
   <a href="#services" class="dark">Услуги</a>
 </li>
       <li class="nav__item">
-  <a href="#" class="dark">Тарифы</a>
+  <a href="#tariffs" class="dark">Тарифы</a>
 </li>
       <li class="nav__item">
-  <a href="#" class="dark">Контакты</a>
+  <a href="#contacts" class="dark">Контакты</a>
 </li>
     </ul>
   
-    <div class="d-flex">
-      <a class="dark tel d-block" href="tel:+375 29 123-45-67">
+    <div class="call">
+      <a class="call__tel" href="tel:+375 29 123-45-67">
         +375 29 123-45-67
       </a>
-      <button class="btn btn__header d-block">
+      <a href="#form" class="btn btn__header d-block dark">
         Заказать звонок
-      </button>
+      </a>
+    </div>
+    <div class="hamburger-menu">
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>
+      <ul class="menu__box">
+        <li><a class="menu__item" href="#about">О нас</a></li>
+        <li><a class="menu__item" href="#services">Услуги</a></li>
+        <li><a class="menu__item" href="#tariffs">Тарифы</a></li>
+        <li><a class="menu__item" href="#contacts">Контакты</a></li>
+      </ul>
+
     </div>
   </nav>
   <div class="container slider">
@@ -110,9 +123,9 @@
     </div>
   </div>
 
-  <div id="services"></div>
 </section>
   <section class="services">
+  <div id="services"></div>
   <div class="custom__container">
     <h2 class="title">Услуги</h2>
     <div class="services__wrapper ">
@@ -214,9 +227,148 @@
       </div>
     </div>
   </div>
+  <div id="tariffs"></div>
+</section>
+  <section class="tariffs">
+  <div class="custom__container ">
+    <h2 class="title">Наши тарифы</h2>
+    <h3 class="title__sub col-12 col-md-9 col-xl-7">Каждая ситуация индивидуальна, поэтому окончательная 
+      стоимость будет согласована после личного общения и определения объема услуг.</h3>
+    <div class="tariffs__wrapper">
+      <div class="tarrif col-12 col-sm-6 col-md-4 col-xl-3">
+  <div class="tarrif__wrapper">
+    <h4 class="tarrif__title">
+      Нулевой
+    </h4>
+    <h4 class="tarrif__price">
+      215 бел. руб./ кв.
+    </h4>
+    <div class="tarrif__body">
+      
+        <p class="tarrif__content">Сдача нулевой отчетности за отчетный квартал, в зависимости от выбранной системы налогообложения.</p>
+      
+    </div>
+  
+    <button class="d-block btn btn__service">
+      Выбрать
+    </button>
+  </div>
+</div>
+      <div class="tarrif col-12 col-sm-6 col-md-4 col-xl-3">
+  <div class="tarrif__wrapper">
+    <h4 class="tarrif__title">
+      Легкий
+    </h4>
+    <h4 class="tarrif__price">
+      258 бел. руб./ мес.
+    </h4>
+    <div class="tarrif__body">
+      
+        <p class="tarrif__content">Заведение документации до 30 документов в месяц.</p>
+      
+        <p class="tarrif__content">Ведение кадрового учета по 1 сотруднику.</p>
+      
+        <p class="tarrif__content">Сдача отчетности за отчетный квартал, в зависимости от выбранной системы налогообложения.</p>
+      
+    </div>
+  
+    <button class="d-block btn btn__service">
+      Выбрать
+    </button>
+  </div>
+</div>
+      <div class="tarrif col-12 col-sm-6 col-md-4 col-xl-3">
+  <div class="tarrif__wrapper">
+    <h4 class="tarrif__title">
+      Оптимальный
+    </h4>
+    <h4 class="tarrif__price">
+      773 бел. руб./ мес.
+    </h4>
+    <div class="tarrif__body">
+      
+        <p class="tarrif__content">Заведение документации до 60 документов в месяц.</p>
+      
+        <p class="tarrif__content">Ведение кадрового учета, до 5 сотрудников.</p>
+      
+        <p class="tarrif__content">Сдача отчетности за отчетный квартал, в зависимости от выбранной системы налогообложения.</p>
+      
+    </div>
+  
+    <button class="d-block btn btn__service">
+      Выбрать
+    </button>
+  </div>
+</div>
+      <div class="tarrif col-12 col-sm-6 col-md-4 col-xl-3">
+  <div class="tarrif__wrapper">
+    <h4 class="tarrif__title">
+      Расширенный
+    </h4>
+    <h4 class="tarrif__price">
+      1 073 бел. руб./ мес.
+    </h4>
+    <div class="tarrif__body">
+      
+        <p class="tarrif__content">Заведение документации  более 100 документов в месяц.</p>
+      
+        <p class="tarrif__content">Ведение кадрового учета более 5 сотрудников.</p>
+      
+        <p class="tarrif__content">Сдача отчетности за отчетный квартал, в зависимости от выбранной системы налогообложения.</p>
+      
+    </div>
+  
+    <button class="d-block btn btn__service">
+      Выбрать
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
 </section>
 </main>
+    <footer class="footer">
+  <div class="custom__container">
+    <div class="footer__wrapper">
+      <div class="contacts col-12 col-lg-6">
+  <div id="contacts"></div>
+  <h2 class="title title__footer light">Контакты</h2>
+  <div class="contacts__wrapper">
+    <p class="contacts__p light">Ваш бухгалтер</p>
+    <p class="contacts__p light">+375 29 123-45-67</p>
+    <p class="contacts__p light">info@accountant.com </p>
+  </div>
+  <div class="contacts__links">
+    <a href="#" class="contact__link">
+      <img src="img/telegram.png" alt="telegram">
+    </a>
+    <a href="#" class="contact__link">
+      <img src="img/facebook.png" alt="facebook">
+    </a>
+    <a href="#" class="contact__link">
+      <img src="img/instagram.png" alt="instagram">
+    </a>
+  </div>
+</div>
+      <div class="form__wrapper col-12 col-lg-6">
+  <h2 id="form" class="title light title__footer">Заказать обратный звонок</h2>
+  <form action="" class="form">
+    <input type="text" name="name" placeholder="Ваше имя*" required>
+    <input type="tel" name="tel" placeholder="Ваш телефон*" required>
+    <textarea name="content" id="" cols="30" rows="4" placeholder="Укажите желаемое время звонка"></textarea>
+    <p class="form__p light">*Поля обязательные для заполнения</p>
+    <label class="label light">
+      Даю согласие на хранение и на обработку персональных данных.
+      <input type="checkbox" required class="check-highload">
+      <span class="highload2"></span>
+    </label>
+    <button class="btn btn__submit" type="submit">Отправить</button>
+  </form>
+</div>
+    </div>
+  </div>
+
+</footer>
     <script src="js/app.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

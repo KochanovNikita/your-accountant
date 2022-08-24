@@ -1,0 +1,89 @@
+.form {
+  margin-top: 4rem;
+  max-width: 30.375rem;
+  input, textarea {
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    width: 100%;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  textarea {
+    margin-bottom: 1.4rem;
+    resize: none;
+  }
+
+  &__p {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.label {
+  display: block;
+  position: relative;
+  padding-left: 3.4rem;
+  height: 2.5rem;
+  margin: 1.25rem 0 3rem 0;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  .check-highload {
+    position: absolute;
+    opacity: 0;
+    &:checked ~ .highload2:after {
+      display: block;
+    }
+  }
+
+  .highload2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #fff;
+    border: 1px solid #989898;
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    &:after {
+      left: 0.8rem;
+      top: 0;
+      width: 1.4rem;
+      height: 2rem;
+      border: 1px solid $light-bg;
+      border-width: 0 4px 4px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:hover .check-highload ~ .highload2 {
+    background-color: #fff;
+  }
+
+  .check-highload:checked ~ .highload2 {
+    background-color: #fff;
+  }
+}
+
+
+@media screen and (max-width: 991px) {
+  .form {
+    margin: 0 auto;
+    margin-top: 4rem;
+  }
+}

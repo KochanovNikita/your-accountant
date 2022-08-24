@@ -1,0 +1,38 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+
+  &__wrapper {
+    margin: 2rem 0;
+  }
+
+  &__p {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  &__links {
+    display: flex;
+    column-gap: 1.5rem;
+  }
+
+  &__link {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .contacts {
+    order: 3;
+    margin: 0 auto;
+    margin-top: 3rem;
+    text-align: center;
+
+    &__links {
+      justify-content: center;
+    }
+  }
+}

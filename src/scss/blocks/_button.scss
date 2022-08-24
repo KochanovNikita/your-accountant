@@ -19,4 +19,11 @@
       background: $light-bg;
     }
   }
+
+  &__submit {
+    display: block;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    padding: .5rem 2.5rem;
+  }
 }

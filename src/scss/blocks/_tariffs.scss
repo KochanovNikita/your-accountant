@@ -1,0 +1,17 @@
+@import './_tariff';
+
+.tariffs {
+  width: 100%;
+  min-height: 654px;
+  padding: 50px 0 32px 0;
+  background: linear-gradient(180deg, rgba(23, 49, 81, 0) 0%, #173151 61.01%);
+  &__wrapper {
+    margin-top: 2.4rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    row-gap: 2rem;
+  }
+}

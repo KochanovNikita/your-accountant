@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Roboto;
   font-display: swap;
@@ -19,6 +20,125 @@
   font-weight: 400;
   font-style: normal;
 }
+#menu__toggle {
+  opacity: 0;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+/* стилизуем кнопку */
+.menu__btn {
+  display: none; /* используем flex для центрирования содержимого */
+  align-items: center; /* центрируем содержимое кнопки */
+  position: relative;
+  width: 1.6rem;
+  height: 1.6rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+}
+
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+/* контейнер меню */
+.menu__box {
+  display: none;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: 100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  transition: all ease-in-out 0.6s;
+}
+
+/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-decoration: none;
+}
+
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  right: 0;
+  left: auto;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: 0.25s;
+}
+
+.menu__box {
+  transition-duration: 0.25s;
+}
+
+.menu__item {
+  transition-duration: 0.25s;
+}
+
+@media screen and (max-width: 991px) {
+  .hamburger-menu {
+    display: block;
+  }
+  .menu__box {
+    display: block;
+  }
+  .menu__btn {
+    display: flex;
+  }
+}
 .header {
   width: 100%;
   min-height: 594px;
@@ -30,15 +150,42 @@
   font-size: 1rem;
   line-height: 2rem;
 }
-.header .tel {
+
+.call {
+  display: flex;
+}
+.call__tel {
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 2rem;
+  margin-right: 2.5rem;
+  display: block;
+  color: #000;
 }
 
+@media screen and (max-width: 1160px) {
+  .call {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 991px) {
+  .call {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 767px) {
+  .call__tel {
+    display: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  .call {
+    display: none;
+  }
+}
 .nav {
   width: 100%;
-  position: fixed;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,6 +207,11 @@
   line-height: 2rem;
 }
 
+@media screen and (max-width: 991px) {
+  .nav__list {
+    display: none;
+  }
+}
 .btn {
   background: #8CADF4;
   border-radius: 10px;
@@ -80,6 +232,12 @@
 }
 .btn__service:hover {
   background: #8CADF4;
+}
+.btn__submit {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  padding: 0.5rem 2.5rem;
 }
 
 .slider input[type=radio] {
@@ -176,6 +334,11 @@
   transform: translate(-300%);
 }
 
+@media screen and (max-width: 768px) {
+  .slider {
+    max-width: 100%;
+  }
+}
 .about {
   width: 100%;
   min-height: 592px;
@@ -206,7 +369,25 @@
   margin: 0 auto;
   width: fit-content;
 }
+.title__sub {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+}
+.title__footer {
+  text-align: left;
+  margin-left: 0.5rem;
+}
 
+@media screen and (max-width: 991px) {
+  .title__sub {
+    text-align: center;
+  }
+  .title__footer {
+    text-align: center;
+  }
+}
 .service__header {
   min-height: 18.5rem;
   background: linear-gradient(180deg, #8CADF4 0%, rgba(140, 173, 244, 0) 80%);
@@ -255,7 +436,7 @@
 }
 .services__wrapper {
   margin-top: 2.4rem;
-  padding: 0 2rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -263,6 +444,187 @@
   row-gap: 2rem;
 }
 
+.tarrif__wrapper {
+  height: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 1rem 1.2rem 2rem 1.2rem;
+}
+.tarrif__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin-bottom: 2.5rem;
+}
+.tarrif__price {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+.tarrif__content {
+  margin-bottom: 1.6rem;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.tarrif__body {
+  margin-bottom: 2.3rem;
+  min-height: 15rem;
+}
+
+.tariffs {
+  width: 100%;
+  min-height: 654px;
+  padding: 50px 0 32px 0;
+  background: linear-gradient(180deg, rgba(23, 49, 81, 0) 0%, #173151 61.01%);
+}
+.tariffs__wrapper {
+  margin-top: 2.4rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  row-gap: 2rem;
+}
+
+.footer {
+  min-height: 632px;
+  padding: 2.7rem 0 4rem 0;
+  background: #173151;
+}
+.footer__wrapper {
+  padding: 0 1rem;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@media screen and (max-width: 991px) {
+  .footer__wrapper {
+    align-items: center;
+    justify-content: center;
+  }
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+.contacts__wrapper {
+  margin: 2rem 0;
+}
+.contacts__p {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  font-size: 1.25rem;
+}
+.contacts__links {
+  display: flex;
+  column-gap: 1.5rem;
+}
+.contacts__link {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+@media screen and (max-width: 991px) {
+  .contacts {
+    order: 3;
+    margin: 0 auto;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .contacts__links {
+    justify-content: center;
+  }
+}
+.form {
+  margin-top: 4rem;
+  max-width: 30.375rem;
+}
+.form input, .form textarea {
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  width: 100%;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+.form textarea {
+  margin-bottom: 1.4rem;
+  resize: none;
+}
+.form__p {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.label {
+  display: block;
+  position: relative;
+  padding-left: 3.4rem;
+  height: 2.5rem;
+  margin: 1.25rem 0 3rem 0;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.label .check-highload {
+  position: absolute;
+  opacity: 0;
+}
+.label .check-highload:checked ~ .highload2:after {
+  display: block;
+}
+.label .highload2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #fff;
+  border: 1px solid #989898;
+}
+.label .highload2:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.label .highload2:after {
+  left: 0.8rem;
+  top: 0;
+  width: 1.4rem;
+  height: 2rem;
+  border: 1px solid #8CADF4;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
+}
+.label:hover .check-highload ~ .highload2 {
+  background-color: #fff;
+}
+.label .check-highload:checked ~ .highload2 {
+  background-color: #fff;
+}
+
+@media screen and (max-width: 991px) {
+  .form {
+    margin: 0 auto;
+    margin-top: 4rem;
+  }
+}
 * {
   font-family: "Roboto";
   font-style: normal;
@@ -271,6 +633,10 @@
   top: 0;
   left: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
 }
 
 a {
@@ -294,10 +660,6 @@ a {
   align-items: center;
 }
 
-.tel {
-  margin-right: 2.5rem;
-}
-
 .wrapper {
   max-width: 90%;
   margin: 0 auto;
@@ -306,4 +668,10 @@ a {
 .custom__container {
   margin: 0 auto;
   max-width: 1280px;
+}
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 14px;
+  }
 }
