@@ -185,7 +185,7 @@
 }
 .nav {
   width: 100%;
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -478,8 +478,8 @@
 
 .tariffs {
   width: 100%;
-  min-height: 654px;
-  padding: 50px 0 32px 0;
+  min-height: 604px;
+  padding: 100px 0 32px 0;
   background: linear-gradient(180deg, rgba(23, 49, 81, 0) 0%, #173151 61.01%);
 }
 .tariffs__wrapper {
